@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="serverset"
+        android:title="网络设置" >
+        <EditTextPreference
+            android:key="serverip"
+            android:title="服务器IP"
+            android:summary="这里手动设置服务器IP地址，设置后默认IP将失效"/>
+        <EditTextPreference
+            android:key="serverport"
+            android:title="服务端口"
+            android:summary="这里手动设置服务器服务的端口，设置后默认端口失效"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/rc_btn_voice_normal"
+    android:baselineAligned="false">
+
+    <!-- 会话 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/linearconversation">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@drawable/comment"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:background="#00ffffff"
+            android:id="@+id/imb1"
+            android:clickable="false" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会话"
+            android:editable="false"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/tvconversation"/>
+    </LinearLayout>
+
+    <!-- 在线好友 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center"
+        android:id="@+id/linearonline">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@drawable/user"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:background="#00ffffff"
+            android:id="@+id/imb2"
+            android:clickable="false"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在线用户"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/tvonline"/>
+    </LinearLayout>
+
+    <!-- 当前好友 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/linearfriend">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@drawable/customers"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:background="#00ffffff"
+            android:id="@+id/imb3"
+            android:clickable="false"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前好友"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/tvfriend"/>
+    </LinearLayout>
+
+</LinearLayout>

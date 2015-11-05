@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">闪聊</string>
+
+    <string name="action_addfriend">添加好友</string>
+    <string name="action_discussion">创建讨论组</string>
+    <string name="action_scan">扫一扫</string>
+    <string name="action_selfinfo">个人信息</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_confirm">确定</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_conversation_list">会话列表</string>
+    <string name="title_activity_view_pager">闪聊</string>
+    <string name="title_activity_group">群组列表</string>
+    <string name="title_activity_user_choose">选择好友</string>
+    <string name="title_activity_add_friend">添加好友</string>
+    <string name="title_activity_my_friends">当前好友</string>
+    <string name="title_activity_self_info">个人信息</string>
+</resources>

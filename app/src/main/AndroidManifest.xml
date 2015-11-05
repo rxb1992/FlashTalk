@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rxb.activity" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.example.rxb.App"
+        android:icon="@drawable/app"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- android:theme="@style/AppTheme" > -->
+        <!-- 登陆 -->
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ViewPager -->
+        <activity
+            android:name=".ViewPagerActivity"
+            android:label="@string/title_activity_view_pager">
+        </activity>
+
+        <!-- 会话 -->
+        <activity
+            android:name=".ConversationActivity"
+            android:label="会话"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.example.rxb.activity"
+                    android:pathPrefix="/conversation"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 会话列表 -->
+        <activity
+            android:name=".ConversationListActivity"
+            android:label="@string/title_activity_conversation_list"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.example.rxb.activity"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 在线用户列表 -->
+        <activity
+            android:name=".OnlineClientActivity"
+            android:label="在线用户"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 讨论组用户选择 -->
+        <activity
+            android:name=".UserChooseActivity"
+            android:label="@string/title_activity_user_choose"
+            android:parentActivityName=".OnlineClientActivity" >
+        </activity>
+
+        <!-- app配置activity -->
+        <activity
+            android:name=".ServerPreference"
+            android:label="网络配置"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" >
+        </activity>
+
+        <!-- 添加好友 -->
+        <activity
+            android:name=".AddFriendActivity"
+            android:label="@string/title_activity_add_friend"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" >
+        </activity>
+
+        <!-- 当前好友 -->
+        <activity
+            android:name=".MyFriendsActivity"
+            android:label="@string/title_activity_my_friends"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 个人信息 -->
+        <activity
+            android:name=".SelfInfoActivity"
+            android:label="@string/title_activity_self_info"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog">
+        </activity>
+    </application>
+
+</manifest>
