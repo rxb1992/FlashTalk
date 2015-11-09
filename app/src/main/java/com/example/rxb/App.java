@@ -3,14 +3,10 @@ package com.example.rxb;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
-
 import com.example.rxb.client.ChatManager;
-import com.example.rxb.client.Guest;
 import com.example.rxb.client.MsgClient;
 import com.example.rxb.util.DBManager;
-
 import io.rong.imkit.RongIM;
-import io.rong.imlib.model.UserInfo;
 
 /**
  * Created by rxb on 2015/10/10.
