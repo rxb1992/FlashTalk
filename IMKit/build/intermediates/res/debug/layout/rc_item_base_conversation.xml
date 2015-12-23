@@ -57,4 +57,4 @@
         android:src="@drawable/rc_ic_message_block"
         android:visibility="gone" />
 
-</RelativeLayout><!-- From: file:/D:/AndroidApp/SocketClient/IMKit/src/main/res/layout/rc_item_base_conversation.xml -->
+</RelativeLayout><!-- From: file:/D:/AdroidApp/FlashTalk/IMKit/src/main/res/layout/rc_item_base_conversation.xml -->

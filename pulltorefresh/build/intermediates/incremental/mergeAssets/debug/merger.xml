@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\AndroidApp\SocketClient\pulltorefresh\assets"/></dataSet><dataSet config="debug"><source path="D:\AndroidApp\SocketClient\pulltorefresh\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\AdroidApp\FlashTalk\pulltorefresh\assets"/></dataSet><dataSet config="debug"><source path="D:\AdroidApp\FlashTalk\pulltorefresh\src\debug\assets"/></dataSet></merger>
