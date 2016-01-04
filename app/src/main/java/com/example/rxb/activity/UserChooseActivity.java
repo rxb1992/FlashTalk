@@ -195,11 +195,6 @@ public class UserChooseActivity extends AppCompatActivity
       }else{
         viewHolder = (ViewHolder) paramView.getTag();
       }
-//      View localView = LayoutInflater.from(UserChooseActivity.this.getApplicationContext()).inflate(R.layout.cell_userchoose_list, null);
-//      ImageView localImageView = (ImageView)localView.findViewById(R.id.userlistimage);
-//      TextView tvName = (TextView)localView.findViewById(R.id.userlistname);
-//      TextView tvID = (TextView)localView.findViewById(R.id.userlistid);
-//      TextView tvToken = (TextView)localView.findViewById(R.id.userlisttoken);
       Guest localGuest = (Guest)getItem(paramInt);
       viewHolder.imageView.setImageResource(R.drawable.rc_default_portrait);
       viewHolder.tvName.setText(localGuest.getGuestName());
