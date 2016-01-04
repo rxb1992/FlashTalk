@@ -180,19 +180,40 @@ public class UserChooseActivity extends AppCompatActivity
       return 0L;
     }
 
-    public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-    {
-      View localView = LayoutInflater.from(UserChooseActivity.this.getApplicationContext()).inflate(R.layout.cell_userchoose_list, null);
-      ImageView localImageView = (ImageView)localView.findViewById(R.id.userlistimage);
-      TextView tvName = (TextView)localView.findViewById(R.id.userlistname);
-      TextView tvID = (TextView)localView.findViewById(R.id.userlistid);
-      TextView tvToken = (TextView)localView.findViewById(R.id.userlisttoken);
+    //通过paramView和ViewHolder来提升listview在已加载的数据时滑动的效率
+    public View getView(int paramInt, View paramView, ViewGroup paramViewGroup) {
+      ViewHolder viewHolder;
+      if(paramView==null){
+        paramView = LayoutInflater.from(UserChooseActivity.this.getApplicationContext()).inflate(R.layout.cell_userchoose_list, null);
+        viewHolder = new ViewHolder();
+        viewHolder.imageView = (ImageView)paramView.findViewById(R.id.userlistimage);
+        viewHolder.tvID = (TextView)paramView.findViewById(R.id.userlistid);
+        viewHolder.tvName =  (TextView)paramView.findViewById(R.id.userlistname);
+        viewHolder.tvToken =  (TextView)paramView.findViewById(R.id.userlisttoken);
+
+        paramView.setTag(viewHolder);
+      }else{
+        viewHolder = (ViewHolder) paramView.getTag();
+      }
+//      View localView = LayoutInflater.from(UserChooseActivity.this.getApplicationContext()).inflate(R.layout.cell_userchoose_list, null);
+//      ImageView localImageView = (ImageView)localView.findViewById(R.id.userlistimage);
+//      TextView tvName = (TextView)localView.findViewById(R.id.userlistname);
+//      TextView tvID = (TextView)localView.findViewById(R.id.userlistid);
+//      TextView tvToken = (TextView)localView.findViewById(R.id.userlisttoken);
       Guest localGuest = (Guest)getItem(paramInt);
-      localImageView.setImageResource(R.drawable.rc_default_portrait);
-      tvName.setText(localGuest.getGuestName());
-      tvID.setText(localGuest.getGuestId());
-      tvToken.setText(localGuest.getGuestToken());
-      return localView;
+      viewHolder.imageView.setImageResource(R.drawable.rc_default_portrait);
+      viewHolder.tvName.setText(localGuest.getGuestName());
+      viewHolder.tvID.setText(localGuest.getGuestId());
+      viewHolder.tvToken.setText(localGuest.getGuestToken());
+      return paramView;
     }
+  }
+
+  //通过paramView和ViewHolder来提升listview在已加载的数据时滑动的效率
+  public static class ViewHolder{
+    ImageView imageView;
+    TextView tvName;
+    TextView tvID;
+    TextView tvToken;
   }
 }
